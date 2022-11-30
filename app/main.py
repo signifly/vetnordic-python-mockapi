@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 app = FastAPI(
     title="VetNordic Mock API",
-    version="0.0.1",
+    version="0.0.2",
     contact={"Name": "Emil Hørlyck", "email": "eh@signifly.com"},
 )
 
@@ -29,7 +29,7 @@ class Product(BaseModel):
     subCategory: Optional[str] = None
     brand: Optional[str] = None
     individualItemDescription: Optional[str] = None
-    barcodesPerIndividualItem: Optional[List[int]]
+    barcodesPerIndividualItem: Optional[List[int]] = None
     skuDescription: Optional[str] = None
     skuUnitDescription: Optional[str] = None
     qtyPerSku: Optional[int] = None
